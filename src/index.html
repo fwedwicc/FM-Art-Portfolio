@@ -9,15 +9,18 @@
 <body>
   <!-- col-start-1 col-end-3 -->
  <div class="grid grid-cols-4 px-14">
-  <div class="col-span-1 border border-white border-solid h-screen">Logo</div>
-  <!-- <div class="col-span-1 ">04</div> -->
-  <div class="border border-white border-solid h-screen">2nd</div>
+  
+  <div id="column-first" class="pt-16 col-span-1">Logo</div>
+  <div id="column-second" class="pt-16 h-screen">2nd</div>
 
-  <div class="col-start-3 border border-white border-solid h-screen">3rd</div>
-
-
-
-  <div class="col-span-1 border border-white border-solid h-screen">4th</div>
+  <div id="column-third" class="pt-16 col-start-3 h-screen">
+   <ul class="space-y-4">
+    <li>About</li>
+    <li>Works</li>
+    <li>Contact</li>
+   </ul>
+  </div>
+  <div id="column-fourth" class="pt-16 col-span-1 h-screen">4th</div>
  </div>
   
 </body>
