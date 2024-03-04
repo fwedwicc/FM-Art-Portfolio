@@ -2,13 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-
-#column-first,
-#column-second,
-#column-third,
-#column-fourth {
-  border-left: 1px solid white;
-}
-#column-fourth {
-  border-right: 1px solid white;
-}
