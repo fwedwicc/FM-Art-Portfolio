@@ -6,17 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./output.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
   <title>Art Portfolio | Frederick Moreno</title>
   <style>
-    body {
+    /* body {
+      26 / 2 = https://www.stefanjudis.com/
       background-image: linear-gradient(#474747 0.5px, transparent 0.5px, transparent calc(100% - 0.5px), #474747 calc(100% - 0.5px)), linear-gradient(90deg, #474747 0.5px, transparent 0.5px, transparent calc(100% - 0.5px), #474747 calc(100% - 0.5px));
-    background-size: 3.8461538461538463%;
-    }
+      background-size: 3.8461538461538463%;
+    } */
   </style>
 </head>
 
 <body style="background-color: #222222; color: #DEDADA;">
-  <div class="grid grid-cols-4 gap-2 px-16 pt-16">
+  <div class="grid grid-cols-4 gap-3 px-16 pt-16">
     <div class="col-start-1">
       <img src="../assets/FM-logo.png" alt="FM-logo" class="w-6 h-6">
     </div>
@@ -24,10 +26,10 @@
     <div class="col-start-3">
       <ul class="space-y-4">
         <a href="#about">
-          <li>About</li>
+          <li>About Me</li>
         </a>
-        <li>Works</li>
         <li>Contact</li>
+        <li>Works</li>
       </ul>
     </div>
 
@@ -91,6 +93,7 @@
       <h4 class="pt-32 text-center">Want more? See all</h4>
     </div>
 
+
     <div class="col-start-1 col-span-3 col-end-3 pt-20" id="about">
       <h1 class="lg:text-9xl text-4xl font-bold">How it all started?</h1>
       <p class="py-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <br> tempor incididunt ut
@@ -105,7 +108,118 @@
       <p class="py-6">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis voluptas laboriosam velit eum
         magni illum neque consequuntur nesciunt quo quae, ab cupiditate eveniet doloremque.</p>
     </div>
-    
+
+
+    <ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical col-start-2 col-end-4">
+      <li>
+        <div class="timeline-middle">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+            <path fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+              clip-rule="evenodd" />
+          </svg>
+        </div>
+        <div class="timeline-start md:text-end mb-10" data-popover-target="popover-left" data-popover-placement="left">
+          <!-- border border-solid border-white -->
+          <time class="font-mono italic">1984</time>
+          <div class="text-lg font-black">First Macintosh computer</div>
+          The Apple Macintosh—later rebranded as the Macintosh 128K—is the original Apple Macintosh personal computer.
+          It played a pivotal role in establishing desktop publishing as a general office function. The motherboard, a 9
+          in (23 cm) CRT monitor, and a floppy drive were housed in a beige case with integrated carrying handle; it
+          came with a keyboard and single-button mouse.
+        </div>
+
+        <div data-popover id="popover-left" role="tooltip"
+          class="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
+          <div
+            class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg dark:border-gray-600 dark:bg-gray-700">
+            <h3 class="font-semibold text-gray-900 dark:text-white">Popover left</h3>
+          </div>
+          <div class="px-5 py-5 space-y-2">
+            <div class="skeleton w-auto h-72" style="background-color: #474747;"></div> 
+            <p>And here's some amazing content. It's very engaging. Right?</p>
+          </div>
+          <div data-popper-arrow></div>
+        </div>
+
+        <hr />
+      </li>
+      <li>
+        <hr />
+        <div class="timeline-middle">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+            <path fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+              clip-rule="evenodd" />
+          </svg>
+        </div>
+        <div class="timeline-end mb-10">
+          <time class="font-mono italic">1998</time>
+          <div class="text-lg font-black">iMac</div>
+          iMac is a family of all-in-one Mac desktop computers designed and built by Apple Inc. It has been the primary
+          part of Apple's consumer desktop offerings since its debut in August 1998, and has evolved through seven
+          distinct forms
+        </div>
+        <hr />
+      </li>
+      <li>
+        <hr />
+        <div class="timeline-middle">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+            <path fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+              clip-rule="evenodd" />
+          </svg>
+        </div>
+        <div class="timeline-start md:text-end mb-10">
+          <time class="font-mono italic">2001</time>
+          <div class="text-lg font-black">iPod</div>
+          The iPod is a discontinued series of portable media players and multi-purpose mobile devices designed and
+          marketed by Apple Inc. The first version was released on October 23, 2001, about 8+1⁄2 months after the
+          Macintosh version of iTunes was released. Apple sold an estimated 450 million iPod products as of 2022. Apple
+          discontinued the iPod product line on May 10, 2022. At over 20 years, the iPod brand is the oldest to be
+          discontinued by Apple
+        </div>
+        <hr />
+      </li>
+      <li>
+        <hr />
+        <div class="timeline-middle">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+            <path fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+              clip-rule="evenodd" />
+          </svg>
+        </div>
+        <div class="timeline-end mb-10">
+          <time class="font-mono italic">2007</time>
+          <div class="text-lg font-black">iPhone</div>
+          iPhone is a line of smartphones produced by Apple Inc. that use Apple's own iOS mobile operating system. The
+          first-generation iPhone was announced by then-Apple CEO Steve Jobs on January 9, 2007. Since then, Apple has
+          annually released new iPhone models and iOS updates. As of November 1, 2018, more than 2.2 billion iPhones had
+          been sold. As of 2022, the iPhone accounts for 15.6% of global smartphone market share
+        </div>
+        <hr />
+      </li>
+      <li>
+        <hr />
+        <div class="timeline-middle">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+            <path fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+              clip-rule="evenodd" />
+          </svg>
+        </div>
+        <div class="timeline-start md:text-end mb-10">
+          <time class="font-mono italic">2015</time>
+          <div class="text-lg font-black">Apple Watch</div>
+          The Apple Watch is a line of smartwatches produced by Apple Inc. It incorporates fitness tracking,
+          health-oriented capabilities, and wireless telecommunication, and integrates with iOS and other Apple products
+          and services
+        </div>
+      </li>
+    </ul>
+
 
     <div class="col-start-1 col-span-1" style="margin-top: 6rem;">
       <div class="skeleton w-auto h-96" style="background-color: #474747;"></div>
@@ -121,16 +235,18 @@
         magni illum neque consequuntur nesciunt quo quae, ab cupiditate eveniet doloremque.</p>
     </div>
 
+
     <div class="col-start-3 col-span-2 pt-20">
       <h1 class="lg:text-9xl text-4xl font-bold text-end">How it's going</h1>
-      <p class="py-12 pl-52">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+      <p class="py-12 pl-52">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+        ut
         labore et dolore magna aliqua. Ut enim ad mini veniam, quis nostrud exercitation ullamco laboris nis.Lorem
         ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nis.</p>
     </div>
 
 
-    
+
 
 
 
@@ -158,7 +274,8 @@
       </div>
     </div>
     <div class="col-start-2 flex justify-center items-center">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae perferendis sed ratione consequatur eius ipsa cumque distinctio laborum.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae perferendis sed ratione consequatur eius ipsa
+        cumque distinctio laborum.</p>
     </div>
 
 
@@ -180,11 +297,9 @@
       </div>
     </div>
     <div class="col-start-4 flex justify-center items-center">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae perferendis sed ratione consequatur eius ipsa cumque distinctio laborum.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae perferendis sed ratione consequatur eius ipsa
+        cumque distinctio laborum.</p>
     </div>
-
-
-
 
 
 
@@ -222,7 +337,7 @@
 
 
 
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
 </body>
 
