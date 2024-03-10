@@ -10,7 +10,5 @@ module.exports = {
       'light-gray':'#DEDADA',
     },
   },
-  plugins: [
-    require("daisyui"),
-  ],
+  plugins: [require("daisyui")],
 }
