@@ -24,27 +24,17 @@
       top: 0;
       left: 0;
       width: 100%;
-
       z-index: 9999;
-      transition: all 700ms ease-in-out;
+      transition: all 800ms ease-in-out;
+
+      /* From https://css.glass */
+      background: rgba(255, 255, 255, 0);
+      backdrop-filter: blur(12.6px);
+      -webkit-backdrop-filter: blur(12.6px);
     }
 
-    .scroll-down {
-      nav {
-        transform: translate3d(0, -100%, 0);
-      }
-    }
-
-    .scroll-up nav ul {
-      display: flex;
-      list-style: none;
-      transition: flex-direction 0.3s ease;
-      /* Add transition for smooth effect */
-    }
-
-    .scroll-up nav ul li {
-      margin-right: 3rem;
-      transition: margin-right 0.3s ease;
+    .scroll-down nav {
+      transform: translate3d(0, -100%, 0);
     }
 
     .menu-is-open {
@@ -59,12 +49,12 @@
 
 <body>
   <!-- Navigation bar -->
-  <nav class="grid grid-cols-4 gap-2 px-16 pt-16">
+  <nav class="grid grid-cols-4 gap-2 px-20 p-10">
     <!-- Logo -->
     <img src="../../assets/FM-logo.png" alt="My Logo" class="w-6 h-atuo col-start-1">
     <!-- Navs -->
     <div class="col-start-3 col-end-4">
-      <ul class="">
+      <ul class="flex space-x-10">
         <li>About me</li>
         <li>Contact</li>
         <li>Works</li>
