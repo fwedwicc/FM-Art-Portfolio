@@ -13,9 +13,46 @@
       transform: translateY(115px);
       transition: transform .5s;
     }
+
     #hero {
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
       line-height: 7rem;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+
+      z-index: 9999;
+      transition: all 700ms ease-in-out;
+    }
+
+    .scroll-down {
+      nav {
+        transform: translate3d(0, -100%, 0);
+      }
+    }
+
+    .scroll-up nav ul {
+      display: flex;
+      list-style: none;
+      transition: flex-direction 0.3s ease;
+      /* Add transition for smooth effect */
+    }
+
+    .scroll-up nav ul li {
+      margin-right: 3rem;
+      transition: margin-right 0.3s ease;
+    }
+
+    .menu-is-open {
+      overflow: hidden;
+
+      nav {
+        filter: none;
+      }
     }
   </style>
 </head>
@@ -27,7 +64,7 @@
     <img src="../../assets/FM-logo.png" alt="My Logo" class="w-6 h-atuo col-start-1">
     <!-- Navs -->
     <div class="col-start-3 col-end-4">
-      <ul class="space-y-3">
+      <ul class="">
         <li>About me</li>
         <li>Contact</li>
         <li>Works</li>
@@ -57,7 +94,7 @@
       </svg>
     </div>
   </nav>
-  <main>
+  <main class="mt-32">
     <!-- Header -->
     <header class="grid grid-cols-4 gap-2 px-20 pt-12">
       <!-- Hero -->
@@ -99,6 +136,7 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script>
+
     const myText = new SplitType('#hero')
 
     gsap.to('.char', {
@@ -116,7 +154,7 @@
         toggleActions: "restart pause reverse pause",
         scrub: 1,
       },
-      y: -200,
+      y: -100,
       ease: "none",
       duration: 3
     });
@@ -127,7 +165,7 @@
         toggleActions: "restart pause reverse pause",
         scrub: 1,
       },
-      y: -400,
+      y: -200,
       ease: "none",
       duration: 3
     });
@@ -138,10 +176,35 @@
         toggleActions: "restart pause reverse pause",
         scrub: 1,
       },
-      y: -600,
+      y: -300,
       ease: "none",
       duration: 3
     });
+
+
+    const body = document.body;
+    let lastScroll = 0;
+
+    window.addEventListener("scroll", () => {
+      const currentScroll = window.pageYOffset;
+      if (currentScroll <= 0) {
+        body.classList.remove("scroll-up");
+        return;
+      }
+
+      if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
+        body.classList.remove("scroll-up");
+        body.classList.add("scroll-down");
+      } else if (
+        currentScroll < lastScroll &&
+        body.classList.contains("scroll-down")
+      ) {
+        body.classList.remove("scroll-down");
+        body.classList.add("scroll-up");
+      }
+      lastScroll = currentScroll;
+    });
+
   </script>
   <!-- Daisyui cdn script -->
   <script src="https://cdn.tailwindcss.com"></script>
