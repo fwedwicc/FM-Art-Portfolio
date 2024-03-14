@@ -95,23 +95,20 @@
       <!-- Card 1 -->
       <div id="card-1" class="col-start-4" style="margin-top: -10rem;">
         <div class="skeleton w-auto h-96"></div>
-        <h1 class="text-5xl font-bold pt-12">2018</h1>
-        <p class="py-6">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis voluptas laboriosam velit eum
-          magni illum neque consequuntur nesciunt quo quae, ab cupiditate eveniet doloremque.</p>
+        <h1 class="text-7xl font-bold reveal-type" data-bg-color="#2c323b" data-fg-color="#a4acbc" style="margin-top: -2rem;">2018</h1>
+        <p class="reveal-type text-lg pt-6" data-bg-color="#2c323b" data-fg-color="#a4acbc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis voluptas laboriosam velit eum magni illum neque consequuntur nesciunt quo quae, ab cupiditate eveniet doloremque.</p>
       </div>
       <!-- Card 2 -->
       <div id="card-2" class="col-start-3" style="margin-top: -26rem;">
         <div class="skeleton w-auto h-96"></div>
-        <h1 class="text-5xl font-bold pt-12">2018</h1>
-        <p class="py-6">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis voluptas laboriosam velit eum
-          magni illum neque consequuntur nesciunt quo quae, ab cupiditate eveniet doloremque.</p>
+        <h1 class="text-7xl font-bold reveal-type" data-bg-color="#2c323b" data-fg-color="#a4acbc" style="margin-top: -2rem;">2018</h1>
+        <p class="reveal-type text-lg pt-6" data-bg-color="#2c323b" data-fg-color="#a4acbc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis voluptas laboriosam velit eum magni illum neque consequuntur nesciunt quo quae, ab cupiditate eveniet doloremque.</p>
       </div>
       <!-- Card 3 -->
       <div id="card-3" class="col-start-2" style="margin-top: -26rem;">
         <div class="skeleton w-auto h-96"></div>
-        <h1 class="text-5xl font-bold pt-12">2018</h1>
-        <p class="py-6">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis voluptas laboriosam velit eum
-          magni illum neque consequuntur nesciunt quo quae, ab cupiditate eveniet doloremque.</p>
+        <h1 class="text-7xl font-bold reveal-type" data-bg-color="#2c323b" data-fg-color="#a4acbc" style="margin-top: -2rem;">2018</h1>
+        <p class="reveal-type text-lg pt-6" data-bg-color="#2c323b" data-fg-color="#a4acbc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis voluptas laboriosam velit eum magni illum neque consequuntur nesciunt quo quae, ab cupiditate eveniet doloremque.</p>
       </div>
       <!-- 'Works' section link -->
       <div class="col-start-1" style="margin-top: -28rem;">
@@ -197,7 +194,7 @@
     });
 
 
-    // Lenis
+    // Lenis script
     const lenis = new Lenis()
 
     lenis.on('scroll', (e) => {
@@ -210,6 +207,37 @@
     }
 
     requestAnimationFrame(raf)
+
+
+    // For text reveal
+    const splitTypes = document.querySelectorAll('.reveal-type')
+
+    splitTypes.forEach((char, i) => {
+
+      const bg = char.dataset.bgColor
+      const fg = char.dataset.fgColor
+
+      const text = new SplitType(char, { types: 'chars' })
+
+      gsap.fromTo(text.chars,
+        {
+          color: bg,
+        },
+        {
+          color: fg,
+          duration: 0.3,
+          stagger: 0.02,
+          scrollTrigger: {
+            trigger: char,
+            start: 'top 80%',
+            end: 'top 20%',
+            scrub: true,
+            markers: false,
+            toggleActions: 'play play reverse reverse'
+          }
+        })
+    })
+
   </script>
   <!-- Daisyui cdn script -->
   <script src="https://cdn.tailwindcss.com"></script>
