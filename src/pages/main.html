@@ -125,6 +125,7 @@
   <!-- GSAP cdn script -->
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
   <script>
 
     const myText = new SplitType('#hero')
@@ -195,6 +196,20 @@
       lastScroll = currentScroll;
     });
 
+
+    // Lenis
+    const lenis = new Lenis()
+
+    lenis.on('scroll', (e) => {
+      console.log(e)
+    })
+
+    function raf(time) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
   </script>
   <!-- Daisyui cdn script -->
   <script src="https://cdn.tailwindcss.com"></script>
