@@ -15,7 +15,7 @@ gsap.to("#card-1", {
     toggleActions: "restart pause reverse pause",
     scrub: 1,
   },
-  y: -100,
+  y: 100,
   ease: "none",
   duration: 3
 });
@@ -26,7 +26,7 @@ gsap.to("#card-2", {
     toggleActions: "restart pause reverse pause",
     scrub: 1,
   },
-  y: -200,
+  y: 200,
   ease: "none",
   duration: 3
 });
@@ -37,7 +37,7 @@ gsap.to("#card-3", {
     toggleActions: "restart pause reverse pause",
     scrub: 1,
   },
-  y: -300,
+  y: 300,
   ease: "none",
   duration: 3
 });
@@ -48,7 +48,7 @@ gsap.to("#works-link", {
     toggleActions: "restart pause reverse pause",
     scrub: 1,
   },
-  y: 100,
+  y: -300,
   ease: "none",
   duration: 3
 });
@@ -95,10 +95,10 @@ splitTypes.forEach((char, i) => {
       stagger: 0.02,
       scrollTrigger: {
         trigger: char,
-        start: 'top 70%',
-        end: 'bottom 60%',
+        start: 'top 60%',
+        end: 'bottom 50%',
         scrub: true,
-        markers: true,
+        markers: false,
         toggleActions: 'play play reverse reverse'
       }
     })
@@ -125,7 +125,7 @@ splitType.forEach((char, i) => {
       scrollTrigger: {
         trigger: char,
         start: 'top 30%',
-        end: 'bottom 60%',
+        end: 'bottom 30%',
         scrub: true,
         markers: false,
         toggleActions: 'play play reverse reverse'
