@@ -75,6 +75,28 @@ gsap.to("#desc", {
   duration: 3
 });
 
+gsap.to("#section1-left", {
+  scrollTrigger: {
+    trigger: "#section1-left",
+    toggleActions: "restart pause reverse pause",
+    scrub: 1,
+  },
+  y: -150,
+  ease: "none",
+  duration: 3
+});
+
+gsap.to("#section1-right", {
+  scrollTrigger: {
+    trigger: "#section1-right",
+    toggleActions: "restart pause reverse pause",
+    scrub: 1,
+  },
+  y: -350,
+  ease: "none",
+  duration: 3
+});
+
 // For text reveal
 const splitTypes = document.querySelectorAll('.reveal-type')
 
