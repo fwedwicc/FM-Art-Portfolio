@@ -70,7 +70,7 @@ gsap.to("#desc", {
     toggleActions: "restart pause reverse pause",
     scrub: 1,
   },
-  y: -100,
+  y: -130,
   ease: "none",
   duration: 3
 });
@@ -95,10 +95,10 @@ splitTypes.forEach((char, i) => {
       stagger: 0.02,
       scrollTrigger: {
         trigger: char,
-        start: 'top 80%',
-        end: 'top 20%',
+        start: 'top 70%',
+        end: 'bottom 60%',
         scrub: true,
-        markers: false,
+        markers: true,
         toggleActions: 'play play reverse reverse'
       }
     })
@@ -124,10 +124,10 @@ splitType.forEach((char, i) => {
       stagger: 0.02,
       scrollTrigger: {
         trigger: char,
-        start: 'top 20%',
-        end: 'bottom 40%',
+        start: 'top 30%',
+        end: 'bottom 60%',
         scrub: true,
-        markers: true,
+        markers: false,
         toggleActions: 'play play reverse reverse'
       }
     })

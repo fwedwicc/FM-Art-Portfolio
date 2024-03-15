@@ -26,8 +26,6 @@
       width: 100%;
       z-index: 9999;
       transition: all 800ms ease-in-out;
-
-      /* From https://css.glass */
       background: rgba(255, 255, 255, 0);
       backdrop-filter: blur(12.6px);
       -webkit-backdrop-filter: blur(12.6px);
@@ -43,6 +41,42 @@
       nav {
         filter: none;
       }
+    }
+
+    li {
+     
+      cursor: pointer;
+      position: relative;
+      border: none;
+      background: none;
+      transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+      transition-duration: 400ms;
+      transition-property: color;
+    }
+
+    li:focus,
+    li:hover {
+      color: #fff;
+    }
+
+    li:focus:after,
+    li:hover:after {
+      width: 100%;
+      left: 0%;
+    }
+
+    li:after {
+      content: "";
+      pointer-events: none;
+      bottom: -1rem;
+      left: 50%;
+      position: absolute;
+      width: 0%;
+      height: 1px;
+      background-color: #fff;
+      transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+      transition-duration: 400ms;
+      transition-property: width, left;
     }
   </style>
 </head>
@@ -89,36 +123,38 @@
     <header class="grid grid-cols-4 gap-2 px-20 pt-28">
       <!-- Hero -->
       <h1 id="hero" class="text-9xl font-bold col-span-2">Explore my creation.</h1>
-      <p id="desc" class="text-lg col-start-1 col-end-3 erase mr-12" data-bg-color="#a4acbc" data-fg-color="#2c323b" style="margin-top: -7rem;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum quis, sequi non quibusdam mollitia suscipit necessitatibus officiis odio quas explicabo laudantium cum veniam cumque.</p>
+      <p id="desc" class="col-start-1 col-end-3 erase mr-12" data-bg-color="#a4acbc" data-fg-color="#2c323b"
+        style="margin-top: -7rem;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum quis, sequi non
+        quibusdam mollitia suscipit necessitatibus officiis odio quas explicabo laudantium cum veniam cumque.</p>
       <!-- Card 1 -->
-      <div id="card-1" class="col-start-4" style="margin-top: -10rem;">
+      <div id="card-1" class="col-start-4" style="margin-top: -14rem;">
         <div class="skeleton w-auto h-96"></div>
         <h1 class="text-7xl font-bold reveal-type" data-bg-color="#2c323b" data-fg-color="#a4acbc"
-          style="margin-top: -2rem;">2018</h1>
-        <p class="reveal-type text-lg pt-6" data-bg-color="#2c323b" data-fg-color="#a4acbc">Lorem ipsum dolor sit, amet
+          style="margin-top: -5rem;">2018</h1>
+        <p class="reveal-type pt-6" data-bg-color="#2c323b" data-fg-color="#a4acbc">Lorem ipsum dolor sit, amet
           consectetur adipisicing elit. Omnis voluptas laboriosam velit eum magni illum neque consequuntur nesciunt quo
           quae, ab cupiditate eveniet doloremque.</p>
       </div>
       <!-- Card 2 -->
-      <div id="card-2" class="col-start-3" style="margin-top: -26rem;">
+      <div id="card-2" class="col-start-3" style="margin-top: -20rem;">
         <div class="skeleton w-auto h-96"></div>
         <h1 class="text-7xl font-bold reveal-type" data-bg-color="#2c323b" data-fg-color="#a4acbc"
-          style="margin-top: -2rem;">2018</h1>
-        <p class="reveal-type text-lg pt-6" data-bg-color="#2c323b" data-fg-color="#a4acbc">Lorem ipsum dolor sit, amet
+          style="margin-top: -5rem;">2018</h1>
+        <p class="reveal-type pt-6" data-bg-color="#2c323b" data-fg-color="#a4acbc">Lorem ipsum dolor sit, amet
           consectetur adipisicing elit. Omnis voluptas laboriosam velit eum magni illum neque consequuntur nesciunt quo
           quae, ab cupiditate eveniet doloremque.</p>
       </div>
       <!-- Card 3 -->
-      <div id="card-3" class="col-start-2" style="margin-top: -26rem;">
+      <div id="card-3" class="col-start-2" style="margin-top: -20rem;">
         <div class="skeleton w-auto h-96"></div>
         <h1 class="text-7xl font-bold reveal-type" data-bg-color="#2c323b" data-fg-color="#a4acbc"
-          style="margin-top: -2rem;">2018</h1>
-        <p class="reveal-type text-lg pt-6" data-bg-color="#2c323b" data-fg-color="#a4acbc">Lorem ipsum dolor sit, amet
+          style="margin-top: -5rem;">2018</h1>
+        <p class="reveal-type pt-6" data-bg-color="#2c323b" data-fg-color="#a4acbc">Lorem ipsum dolor sit, amet
           consectetur adipisicing elit. Omnis voluptas laboriosam velit eum magni illum neque consequuntur nesciunt quo
           quae, ab cupiditate eveniet doloremque.</p>
       </div>
       <!-- 'Works' section link -->
-      <div id="works-link" class="col-start-1" style="margin-top: -28rem;">
+      <div id="works-link" class="col-start-1" style="margin-top: -23rem;">
         <h4 class="text-center">Want more? See all</h4>
       </div>
     </header>
