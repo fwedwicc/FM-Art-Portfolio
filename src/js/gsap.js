@@ -202,10 +202,10 @@ splitType4.forEach((char, i) => {
       stagger: 0.02,
       scrollTrigger: {
         trigger: char,
-        start: 'bottom 95%',
-        end: 'bottom 75%',
+        start: 'bottom 90%',
+        end: 'bottom 85%',
         scrub: true,
-        markers: true,
+        markers: false,
         toggleActions: 'play play reverse reverse'
       }
     })
