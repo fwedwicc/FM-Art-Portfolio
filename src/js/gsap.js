@@ -92,15 +92,15 @@ gsap.to("#section1-right", {
     toggleActions: "restart pause reverse pause",
     scrub: 1,
   },
-  y: -350,
+  y: -400,
   ease: "none",
   duration: 3
 });
 
 // For text reveal
-const splitTypes = document.querySelectorAll('.reveal-type')
+const splitType1 = document.querySelectorAll('.reveal-type')
 
-splitTypes.forEach((char, i) => {
+splitType1.forEach((char, i) => {
 
   const bg = char.dataset.bgColor
   const fg = char.dataset.fgColor
@@ -127,9 +127,9 @@ splitTypes.forEach((char, i) => {
 })
 
 
-const splitType = document.querySelectorAll('.erase')
+const splitType2 = document.querySelectorAll('.erase')
 
-splitType.forEach((char, i) => {
+splitType2.forEach((char, i) => {
 
   const bg = char.dataset.bgColor
   const fg = char.dataset.fgColor
@@ -150,6 +150,62 @@ splitType.forEach((char, i) => {
         end: 'bottom 30%',
         scrub: true,
         markers: false,
+        toggleActions: 'play play reverse reverse'
+      }
+    })
+})
+
+const splitType3 = document.querySelectorAll('.section1-reveal')
+
+splitType3.forEach((char, i) => {
+
+  const bg = char.dataset.bgColor
+  const fg = char.dataset.fgColor
+
+  const text = new SplitType(char, { types: 'chars' })
+
+  gsap.fromTo(text.chars,
+    {
+      color: bg,
+    },
+    {
+      color: fg,
+      duration: 0.3,
+      stagger: 0.02,
+      scrollTrigger: {
+        trigger: char,
+        start: 'top 50%',
+        end: 'bottom 60%',
+        scrub: true,
+        markers: false,
+        toggleActions: 'play play reverse reverse'
+      }
+    })
+})
+
+const splitType4 = document.querySelectorAll('.section1-reveal-2')
+
+splitType4.forEach((char, i) => {
+
+  const bg = char.dataset.bgColor
+  const fg = char.dataset.fgColor
+
+  const text = new SplitType(char, { types: 'chars' })
+
+  gsap.fromTo(text.chars,
+    {
+      color: bg,
+    },
+    {
+      color: fg,
+      duration: 0.3,
+      stagger: 0.02,
+      scrollTrigger: {
+        trigger: char,
+        start: 'bottom 95%',
+        end: 'bottom 75%',
+        scrub: true,
+        markers: true,
         toggleActions: 'play play reverse reverse'
       }
     })
