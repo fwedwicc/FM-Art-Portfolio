@@ -7,6 +7,8 @@
   <link href="./css/output.css" rel="stylesheet">
   <!-- Daisyui cdn -->
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.3/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <!-- Flowbite cdn -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
   <title>Art Portfolio | Frederick Moreno</title>
   <style>
     .char {
@@ -43,7 +45,7 @@
       }
     }
 
-    li {
+    .links {
 
       cursor: pointer;
       position: relative;
@@ -54,18 +56,18 @@
       transition-property: color;
     }
 
-    li:focus,
-    li:hover {
+    .links:focus,
+    .links:hover {
       color: #fff;
     }
 
-    li:focus:after,
-    li:hover:after {
+    .links:focus:after,
+    .links:hover:after {
       width: 100%;
       left: 0%;
     }
 
-    li:after {
+    .links:after {
       content: "";
       pointer-events: none;
       bottom: -1rem;
@@ -89,9 +91,9 @@
     <!-- Navs -->
     <div class="col-start-3 col-end-4">
       <ul class="flex space-x-10">
-        <li>About me</li>
-        <li>Contact</li>
-        <li>Works</li>
+        <li class="links">About me</li>
+        <li class="links">Contact</li>
+        <li class="links">Works</li>
       </ul>
     </div>
     <!-- Socials -->
@@ -158,7 +160,7 @@
         <h4 class="text-center">Want more? See all</h4>
       </div>
     </header>
-    <section class="grid grid-cols-4 gap-2 px-20 pt-28 pb-40">
+    <section class="grid grid-cols-4 gap-2 px-20 pt-28 pb-5">
       <div class="col-start-1 col-span-3 col-end-3 pt-20" id="section1-left">
         <h1 class="lg:text-9xl text-4xl font-bold section1-reveal" data-bg-color="#2c323b" data-fg-color="#a4acbc">How
           it all<br>started?</h1>
@@ -196,8 +198,7 @@
             <div class="text-lg font-black">First Macintosh computer</div>
             The Apple Macintosh—later rebranded as the Macintosh 128K—is the original Apple Macintosh personal computer.
             It played a pivotal role in establishing desktop publishing as a general office function. The motherboard, a
-            9
-            in (23 cm) CRT monitor, and a floppy drive were housed in a beige case with integrated carrying handle; it
+            9 in (23 cm) CRT monitor, and a floppy drive were housed in a beige case with integrated carrying handle; it
             came with a keyboard and single-button mouse.
           </div>
           <!-- Popover for first item in timeline -->
@@ -320,6 +321,8 @@
   <script src="../js/script.js"></script>
   <!-- Daisyui cdn script -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Flowbite cdn script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 </body>
 
 </html>
